@@ -1,7 +1,7 @@
 # Interactive Entertainment Planner
-> Here is where we will describe the project.
  
 ## Table of contents
+* [Desctiption](#description)
 * [User story](#user-story)
 * [General info](#general-info)
 * [Screenshots](#screenshots)
@@ -9,19 +9,21 @@
 * [Live link](#live-link)
 * [Contact](#contact)
 
+## Description
+Here is where we will describe the project. 
+
+## General info
+And here is where the general info will go.
+
 ## User story
 As AN INDECISIVE PERSON who needs help curating an evening
 I WANT a simple application that can recommend different activities
 SO THAT I can try new things and enjoy my evening.
 
-## General info
-And here is where the general info will go.
-
 ## Screenshots
-![Screenshot](link here)
+![Image](assets/images/placeholder.jpg)
 
 ## Technologies
-* HTML
 * CSS
 * JQuery
 * TBD
