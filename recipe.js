@@ -22,16 +22,23 @@ function generateRecipe() {
       }).then(function(response) {
         var responseParse = JSON.parse(response)
         responseParse.results.forEach(function(result){
-            console.log(result.title);
-            console.log(result.ingredients);
-            console.log(result.href);
+            var recipeLink = $('<a>').attr('id', 'recipe').attr('href', result.href).attr('target', '_blank').html(result.title + "<br>");
+            $('body').append(recipeLink);
         })
     });
+};
 
-    // Append everything to the page
-    // Put the recipe in local storage - or maybe put the ingredients you've searched for in local storage? That way it could pull back and tell you to be inspirational and search for different ingredients
+$('.recipe').on('click', saveRecipe);
 
+function saveRecipe(event) {
+    event.preventDefault();
 
+    var storedRecipes = {
+        recipe: result.title,
+        recipeLink: result.ingredients,
+    }
+    console.log(storedRecipes);
+    localStorage.setItem('storedRecipes', JSON.stringify(storedRecipes));
 };
 
 
