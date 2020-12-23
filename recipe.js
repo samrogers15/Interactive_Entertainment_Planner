@@ -27,16 +27,18 @@ function generateRecipe() {
             $(recipeLink).append(saveButton);
             $('body').append(recipeLink);
         });
+        function saveRecipe(event) {
+        event.preventDefault();
+        console.log($(this).text());
+        };
+      
     });
 
-    function saveRecipe(event) {
-        event.preventDefault();
-        console.log($('.recipe').text());
-    };
+    // localStorage.setItem('searchedIngredients', JSON.stringify(ingredients));
 };
 
-
-
+    // var saveButton = $('<button class = "save" id = "saveBtn">').html('Save this recipe!').on('click', saveRecipe);
+    // $(recipeLink).append(saveButton);
     // function saveRecipe(event) {
     // event.preventDefault();
     // console.log($(this).text());
