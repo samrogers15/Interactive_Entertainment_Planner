@@ -23,31 +23,26 @@ function generateRecipe() {
         var responseParse = JSON.parse(response)
         responseParse.results.forEach(function(result){
             var recipeLink = $('<a>').attr('class', 'recipe').attr('href', result.href).attr('target', '_blank').html(result.title + "<br>");
+            var saveButton = $('<button class = "save" id = "saveBtn">').html('Save this recipe!').on('click', saveRecipe);
+            $(recipeLink).append(saveButton);
             $('body').append(recipeLink);
-            
-        })
-        $('.recipe').on('click', saveRecipe);
+        });
     });
-    
 
     function saveRecipe(event) {
         event.preventDefault();
-        console.log($(this).text());
-        // var storedRecipes = {
-        // recipe: result.title,
-        // recipeLink: result.ingredients,
-        // };
-        // console.log(storedRecipes);
-        // localStorage.setItem('storedRecipes', JSON.stringify(storedRecipes));
+        console.log($('.recipe').text());
     };
 };
 
 
 
-
-
-
-
-
-
- 
+    // function saveRecipe(event) {
+    // event.preventDefault();
+    // console.log($(this).text());
+            // var storedRecipes = {
+            // recipe: result.title,
+            // recipeLink: result.ingredients,
+            // };
+            // console.log(storedRecipes);
+            // localStorage.setItem('storedRecipes', JSON.stringify(storedRecipes));
