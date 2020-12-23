@@ -45,8 +45,10 @@ $('body').append(movieResultsContainer);
 var recipeContainer = $('<div class = "container" id = "recipe-container">');
 $('body').append(recipeContainer);
 //create btn
+recipeInput = $("<input>")
 recipeBtn = $("<button>")
-recipeBtn.text('generate a recipe');
+recipeBtn.text('enter');
+$("#recipe-container").append(recipeInput)
 $("#recipe-container").append(recipeBtn)
 //container for results
 var recipeResultsContainer = $('<div class = "container" id = "recipe-container-results">');
