@@ -16,15 +16,15 @@ $.ajax({
 
 
    
-var movieSuggestion = $("<p></p>");
-movieSuggestion.text(responseMovie.Similar.Results[0].Name);
-var movieTrailerClip = responseMovie.Similar.Results[0].yUrl;
-var movieTrailer = $("<a></a>").attr('href', movieTrailerClip);
-console.log(movieTrailer);
-console.log(responseMovie.Similar.Results[0].yUrl);
+    var movieSuggestion = $("<p></p>");
+    movieSuggestion.text(responseMovie.Similar.Results[0].Name);
+    var movieTrailerClip = responseMovie.Similar.Results[0].yUrl;
+    var movieTrailer = $("<a></a>").attr('href', movieTrailerClip);
+    console.log(movieTrailer);
+    console.log(responseMovie.Similar.Results[0].yUrl);
 
-// $('body').append('<div class = movieTitle></div>');
-$(movieResultsContainer).append(movieSuggestion);
-$(movieResultsContainer).append(movieTrailer);
+    // $('body').append('<div class = movieTitle></div>');
+    $(movieResultsContainer).append(movieSuggestion);
+    $(movieResultsContainer).append(movieTrailer);
 })
 });
