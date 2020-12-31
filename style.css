@@ -1,4 +1,49 @@
-body {
+html {
     background-color: bisque;
     font-family: helvetica;
+    margin: 20px;
 }
+
+#title-sub-div {
+    margin-bottom: 10px;
+}
+
+/* .button{
+    padding: 15px;
+    margin-top: 50px;
+    margin-left: 550px;
+    margin-bottom: 15px;
+    border: 3px solid red;
+    text-align: center;
+} */
+
+#appIntro {
+    text-align: center;
+}
+
+/* .movie-button {
+    margin: 0px;
+    padding: 15px;
+    margin-left: 0px;
+} */
+.button {
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+}
+
+.movie-button {
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+#movie-input {
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+    padding: 5px;
+}
+
