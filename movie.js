@@ -23,7 +23,7 @@ $.ajax({
     var movieTrailer = $("<a></a>").attr(
         {href: movieTrailerClip,
             target: "blank"
-    }).text(JSON.stringify(movieSuggestion));
+    }).html(JSON.stringify(movieSuggestion) + "<br>");
     console.log(movieTrailer);
     console.log(responseMovie.Similar.Results[0].yUrl);
 
