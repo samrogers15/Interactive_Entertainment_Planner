@@ -50,8 +50,6 @@ $('body').append(drinkResultsContainer);
 //recipe
 var recipeContainer = $('<div class = "container column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd" id = "recipe-container">');
 $('body').append(recipeContainer);
-recipeInput = $("<input>")
-$("#recipe-container").append(recipeInput)
 //create btn
 recipeInput = $("<input>").attr('id', 'recipeInput').attr('placeholder', 'Enter ingredients separated by a comma!');
 recipeBtn = $("<button>").attr('id', 'recipeSearch');

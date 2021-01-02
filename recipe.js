@@ -40,7 +40,7 @@ if (previousIngredients != null) {
 }
 
 function previouslySearchedIngredients() {
-    var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients').text(('You\'ve already searched for these ingredients: ' + previousIngredients));
+    var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients').text(('You\'ve already searched for these ingredients: ' + previousIngredients + ' '));
     console.log(previousIngredients);
     $('body').append(previousIngredientsDiv);
 }
