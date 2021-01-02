@@ -38,7 +38,7 @@ $('body').append(movieResultsContainer);
 var drinkContainer = $('<div class = "container column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd" id = "drink-container">');
 $('body').append(drinkContainer);
 //create btn
-drinkBtn = $("<button>")
+drinkBtn = $("<button id='drink-button'>")
 drinkBtn.text('Generate Drink');
 $("#drink-container").append(drinkBtn)
 drinkBtn.attr('class', 'button')
@@ -50,8 +50,10 @@ $('body').append(drinkResultsContainer);
 //recipe
 var recipeContainer = $('<div class = "container column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd" id = "recipe-container">');
 $('body').append(recipeContainer);
+recipeInput = $("<input>")
+$("#recipe-container").append(recipeInput)
 //create btn
-recipeBtn = $("<button>")
+recipeBtn = $("<button id='recipe-button'>")
 recipeBtn.text('Generate Recipe');
 $("#recipe-container").append(recipeBtn)
 recipeBtn.attr('class', 'button');
