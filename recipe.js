@@ -1,12 +1,7 @@
 recipeBtn.on('click', generateRecipe);
 
 
-var previousIngredients = localStorage.getItem('previousSearches');
-
-// if (previousIngredients != null) {
-//     var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients').text(('You\'ve already searched for these ingredients: ' + previousIngredients));
-//     $('body').append(previousIngredients)
-// }
+var previousIngredients = JSON.parse(localStorage.getItem('previousSearches'));
 
 function generateRecipe(event) {
     event.preventDefault();
@@ -51,5 +46,3 @@ function previouslySearchedIngredients() {
 }
 
 $('#previousIngredientsBtn').on('click', previouslySearchedIngredients);
-
-// console.log(previousIngredients);
