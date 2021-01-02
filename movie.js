@@ -10,6 +10,7 @@ $.ajax({
     console.log(responseMovie);
     $(movieResultsContainer).text(JSON.stringify(movieSuggestion))
     
+    $(movieResultsContainer).empty();
     var movieArray = responseMovie.Similar.Results
     for (let i = 0; i < movieArray.length; i++) {
         // const element = responseMovie[i];
