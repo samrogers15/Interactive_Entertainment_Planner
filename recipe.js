@@ -1,18 +1,18 @@
-
-
 recipeBtn.on('click', generateRecipe);
 
 
+var previousIngredients = localStorage.getItem('previousSearches');
+
+// if (previousIngredients != null) {
+//     var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients').text(('You\'ve already searched for these ingredients: ' + previousIngredients));
+//     $('body').append(previousIngredients)
+// }
 
 function generateRecipe(event) {
     event.preventDefault();
     $('.recipe').empty();
     var ingredients = $('#recipeInput').val().trim();
-    console.log(ingredients);
-    // new variable should be the string from the user input
     var recipeQueryURL = "https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?i=" + ingredients;
-    // console.log(ingredientQuery);
-    console.log(recipeQueryURL);
 
     $.ajax({
         url: recipeQueryURL,
@@ -21,19 +21,11 @@ function generateRecipe(event) {
         var responseParse = JSON.parse(response)
         responseParse.results.forEach(function(result){
             var recipeLink = $('<a>').attr('class', 'recipe').attr('href', result.href).attr('target', '_blank').html(result.title + "<br>");
-           
             $('body').append(recipeLink);
-        });
-        // function saveRecipe(ingredients) {
-        // console.log(ingredients);
-        // };
-      
+            // var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients').text(('You\'ve already searched for these ingredients: ' + previousIngredients));
+        });      
     });
-
-    
-    // var previousIngredients = {
-    //     ingredients};
-    
+ 
     function appendToStorage(name, data) {
         var old = localStorage.getItem(name);
         if (old == null) {
@@ -45,10 +37,19 @@ function generateRecipe(event) {
     }
     
     appendToStorage('previousSearches', ingredients);
-
-  
-
-    
-
-
 };
+
+if (previousIngredients != null) {
+    var previousIngredientsButton = $('<button>').attr('id', 'previousIngredientsBtn').text('Click here to see previously searched ingredients');
+    $('body').append(previousIngredientsButton);
+}
+
+function previouslySearchedIngredients() {
+    var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients').text(('You\'ve already searched for these ingredients: ' + previousIngredients));
+    console.log(previousIngredients);
+    $('body').append(previousIngredientsDiv);
+}
+
+$('#previousIngredientsBtn').on('click', previouslySearchedIngredients);
+
+// console.log(previousIngredients);
