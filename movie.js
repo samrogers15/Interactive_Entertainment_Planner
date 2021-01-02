@@ -19,7 +19,7 @@ $.ajax({
     var movieSuggestion = $("<p></p>");
     movieSuggestion.text(responseMovie.Similar.Results[0].Name);
     var movieTrailerClip = responseMovie.Similar.Results[0].yUrl;
-    var movieTrailer = $("<a></a>").attr('href', movieTrailerClip).text(JSON.stringify(movieTrailerClip));
+    var movieTrailer = $("<a></a>").attr('href', movieTrailerClip).text(JSON.stringify(responseMovie.Similar.Results[0].Name));
     console.log(movieTrailer);
     console.log(responseMovie.Similar.Results[0].yUrl);
 
