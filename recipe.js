@@ -6,6 +6,7 @@ recipeBtn.on('click', generateRecipe);
 
 function generateRecipe(event) {
     event.preventDefault();
+    $('.recipe').empty();
     var ingredients = $('#recipeInput').val().trim();
     console.log(ingredients);
     // new variable should be the string from the user input
@@ -29,27 +30,25 @@ function generateRecipe(event) {
       
     });
 
-    var previousIngredients = {
-        ingredients};
+    
+    // var previousIngredients = {
+    //     ingredients};
+    
+    function appendToStorage(name, data) {
+        var old = localStorage.getItem(name);
+        if (old == null) {
+            old = [];
+        } else {
+            old = JSON.parse(old);
+        }
+        localStorage.setItem(name, JSON.stringify(old.concat(data)));
+    }
+    
+    appendToStorage('previousSearches', ingredients);
 
-    localStorage.setItem('previousIngredients', JSON.stringify(previousIngredients));
-    // var previousSearches = $('<div class = "previousSearch" id = "previousSearch">').text(JSON.parse(localStorage.getItem('previousIngredients')));
-    // $('body').append(previousSearches);
-    console.log(previousIngredients);
+  
 
-};
     
 
 
-
-    // var saveButton = $('<button class = "save" id = "saveBtn">').html('Save this recipe!').on('click', saveRecipe);
-    // $(recipeLink).append(saveButton);
-    // function saveRecipe(event) {
-    // event.preventDefault();
-    // console.log($(this).text());
-            // var storedRecipes = {
-            // recipe: result.title,
-            // recipeLink: result.ingredients,
-            // };
-            // console.log(storedRecipes);
-            // localStorage.setItem('storedRecipes', JSON.stringify(storedRecipes));
+};
