@@ -50,11 +50,11 @@ $('body').append(drinkResultsContainer);
 //recipe
 var recipeContainer = $('<div class = "container column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd" id = "recipe-container">');
 $('body').append(recipeContainer);
-recipeInput = $("<input>")
-$("#recipe-container").append(recipeInput)
 //create btn
-recipeBtn = $("<button id='recipe-button'>")
-recipeBtn.text('Generate Recipe');
+recipeInput = $("<input>").attr('id', 'recipeInput').attr('placeholder', 'Enter ingredients separated by a comma!');
+recipeBtn = $("<button>").attr('id', 'recipeSearch');
+recipeBtn.text('enter');
+$("#recipe-container").append(recipeInput)
 $("#recipe-container").append(recipeBtn)
 recipeBtn.attr('class', 'button');
 //container for results
