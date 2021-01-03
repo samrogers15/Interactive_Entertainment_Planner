@@ -16,7 +16,7 @@ function generateRecipe(event) {
         var responseParse = JSON.parse(response)
         responseParse.results.forEach(function(result){
             var recipeLink = $('<a>').attr('class', 'recipe').attr('href', result.href).attr('target', '_blank').html(result.title + "<br>");
-            $('body').append(recipeLink);
+            $(recipeResultsContainer).append(recipeLink);
             // var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients').text(('You\'ve already searched for these ingredients: ' + previousIngredients));
         });      
     });
