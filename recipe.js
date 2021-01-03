@@ -36,6 +36,7 @@ function generateRecipe(event) {
 
 if (previousIngredients != null) {
     var previousIngredientsButton = $('<button>').attr('id', 'previousIngredientsBtn').text('Click here to see previously searched ingredients');
+    previousIngredientsButton.attr('class', 'button');
     $('body').append(previousIngredientsButton);
 }
 

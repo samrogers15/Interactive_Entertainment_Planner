@@ -15,17 +15,20 @@ $( "#drink-button" ).click(function() {
         //console.log ingredients
         var drinkInfo = response.drinks[0];
         console.log(drinkInfo)
+
     
         //append drink name 
         drinkName = response.drinks[0].strDrink
         console.log(drinkName)
-        $("#drink-container-results").append("Drink Name: " + drinkName + "<br>");
+        var drinkResults = $("#drink-container-results").append("Drink Name: " + drinkName + "<br>");
+        drinkResults.attr('class', 'drink-results has-text-centered has-background-warning-light is-block has-text-weight-semibold pt-4 pb-4');
     
         //and picture
         drinkPic = response.drinks[0].strDrinkThumb
         console.log(drinkPic)
         var image = $("<img>").attr("src", drinkPic);
         $("#drink-container-results").append(image);
+        image.attr('class', 'drink-image image is-128x128 image is-inline-block');
     
         $("#drink-container-results").append("<br>" + "Ingredients:" + "<br>");
     
