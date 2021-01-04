@@ -27,7 +27,7 @@ function generateRecipe(event) {
         } else {
             old = JSON.parse(old);
         }
-        localStorage.setItem(name, JSON.stringify(old.concat(data)));
+        localStorage.setItem(name, JSON.stringify(old.concat(' ' + data)));
     }
     
     appendToStorage('previousSearches', ingredients);
