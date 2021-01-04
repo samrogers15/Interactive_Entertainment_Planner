@@ -36,11 +36,12 @@ function generateRecipe(event) {
 
 if (previousIngredients != null) {
     var previousIngredientsButton = $('<button>').attr('id', 'previousIngredientsBtn').text('Click here to see previously searched ingredients');
+    previousIngredientsButton.attr('class', 'button is-small is-fullwidth');
     $('body').append(previousIngredientsButton);
 }
 
 function previouslySearchedIngredients() {
-    var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients').text(('You\'ve already searched for these ingredients: ' + previousIngredients + ' '));
+    var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients has-text-weight-light has-text-light has-background-primary-dark box pt-4 pb-4').text(('You\'ve already searched for these ingredients: ' + previousIngredients + ' '));
     console.log(previousIngredients);
     $(recipeResultsContainer).append(previousIngredientsDiv);
 }
