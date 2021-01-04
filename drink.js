@@ -21,7 +21,7 @@ $( "#drink-button" ).click(function() {
         drinkName = response.drinks[0].strDrink
         console.log(drinkName)
         var drinkResults = $("#drink-container-results").append("Drink Name: " + drinkName + "<br>");
-        drinkResults.attr('class', 'drink-results has-text-centered has-background-warning-light is-block has-text-weight-semibold pt-4 pb-4');
+        drinkResults.attr('class', 'drink-results mt-4 mb-6 has-text-centered has-background-warning-light is-block has-text-weight-semibold pt-4 pb-4');
     
         //and picture
         drinkPic = response.drinks[0].strDrinkThumb
