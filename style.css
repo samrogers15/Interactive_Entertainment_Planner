@@ -6,14 +6,12 @@ html {
 
 img {
     border: 14px solid whitesmoke;
-   
+    border-radius: 300%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
     margin-top: 28px;
-   
-    
 }
 
 .row {
@@ -57,25 +55,32 @@ img {
     padding: 5px;
 }
 
-#movie-results {
+.movie-results {
     width:50%;
     margin-left:25%;
     margin-right:25%;
+    box-shadow: 5px 5px 2px rgb(167, 160, 160);
+    border-radius: 15px;
+    
 }
 
-#drink-results {
+.drink-results {
     width:50%;
     margin-left:25%;
     margin-right:25%;
+    box-shadow: 5px 5px 2px rgb(167, 160, 160);
+    border-radius: 15px;;
 }
 
-#recipe-results {
+.recipe-results {
     width:50%;
     margin-left:25%;
     margin-right:25%;
+    box-shadow: 5px 5px 2px rgb(167, 160, 160);
+    border-radius: 15px;
 }
 
-#drink-image {
+.drink-image {
     border: solid black 3px;
     margin-left: auto;
 }

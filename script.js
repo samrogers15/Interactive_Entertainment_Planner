@@ -33,7 +33,7 @@ $("#movie-container").append(movieBtn)
 //container for results
 var movieResultsContainer = $('<div class = "container" id = "movie-container-results">');
 $('body').append(movieResultsContainer);
-movieResultsContainer.attr('class', 'movie-results has-text-centered has-background-warning-light is-block has-text-weight-semibold')
+movieResultsContainer.attr('class', 'movie-results has-text-centered has-background-warning-light is-block has-text-weight-semibold mb-6')
 
 //drinks
 var drinkContainer = $('<div class = "container column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd" id = "drink-container">');
@@ -42,7 +42,7 @@ $('body').append(drinkContainer);
 drinkBtn = $("<button id='drink-button'>")
 drinkBtn.text('Generate Drink');
 $("#drink-container").append(drinkBtn)
-drinkBtn.attr('class', 'button has-background-primary-dark')
+drinkBtn.attr('class', 'button mb-4 has-background-primary-dark')
 //container for results
 var drinkResultsContainer = $('<div class = "container" id = "drink-container-results">');
 $('body').append(drinkResultsContainer);
@@ -57,11 +57,11 @@ recipeBtn = $("<button>").attr('id', 'recipeSearch');
 recipeBtn.text('Enter');
 $("#recipe-container").append(recipeInput)
 $("#recipe-container").append(recipeBtn)
-recipeBtn.attr('class', 'button has-background-primary-dark');
+recipeBtn.attr('class', 'button mb-4 has-background-primary-dark');
 //container for results
 var recipeResultsContainer = $('<div class = "container" id = "recipe-container-results">');
 $('body').append(recipeResultsContainer);
-recipeResultsContainer.attr('class', 'recipe-results has-text-centered has-background-warning-light is-block has-text-weight-semibold');
+recipeResultsContainer.attr('class', 'recipe-results mt-4 mb-6 has-text-centered has-background-warning-light is-block has-text-weight-semibold');
 
 
 
