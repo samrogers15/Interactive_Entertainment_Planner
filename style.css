@@ -1,31 +1,40 @@
 html {
     background-color: bisque;
     font-family: helvetica;
-    margin: 20px;
+    margin: 25px;
 }
 
+img {
+    border: 14px solid whitesmoke;
+   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 28px;
+   
+    
+}
+
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+  
 #title-sub-div {
     margin-bottom: 10px;
 }
 
-/* .button{
-    padding: 15px;
-    margin-top: 50px;
-    margin-left: 550px;
-    margin-bottom: 15px;
-    border: 3px solid red;
-    text-align: center;
-} */
 
 #appIntro {
     text-align: center;
 }
 
-/* .movie-button {
-    margin: 0px;
-    padding: 15px;
-    margin-left: 0px;
-} */
+
 .button {
     width:50%;
     margin-left:25%;
@@ -44,6 +53,45 @@ html {
     width:50%;
     margin-left:25%;
     margin-right:25%;
+    margin-top: 40px;
     padding: 5px;
 }
 
+#movie-results {
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+}
+
+#drink-results {
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+}
+
+#recipe-results {
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+}
+
+#drink-image {
+    border: solid black 3px;
+    margin-left: auto;
+}
+
+#recipeInput {
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+#previousIngredientsBtn {
+    width:40%;
+    margin-left:30%;
+    margin-right:30%;
+    margin-top: 10px;
+    font-size:1vw;
+}
