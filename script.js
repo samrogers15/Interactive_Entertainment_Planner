@@ -14,7 +14,7 @@ var headerSubDiv = $('<h2 class= "has-background-warning-light  has-text-centere
 $('.container').append(headerSubDiv);
 
 
-var appIntroText = $('<p class = "has-text-centered has-text-light has-background-primary-dark pt-5 pb-5 appIntro" id = "appIntro">').text('First, enter a movie title input field below. Then click the following buttons to generate a drink and a recipe. Finally, have fun!');
+var appIntroText = $('<p class = "has-text-centered has-text-light has-background-primary-dark pt-5 pb-5 appIntro" id = "appIntro">').text('First, enter a movie title in the input field below. Then click the following buttons to generate a drink and a recipe. Finally, have fun!');
 $('.container').append(appIntroText);
 
 //make 3 containers, one for each field
