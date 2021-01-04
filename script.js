@@ -14,7 +14,7 @@ var headerSubDiv = $('<h2 class= "has-background-warning-light  has-text-centere
 $('.container').append(headerSubDiv);
 
 
-var appIntroText = $('<p class = "has-text-centered has-text-light is-size-6 has-background-primary-dark pt-5 pb-5 appIntro" id = "appIntro">').text('First, enter a movie title input field below. Then click the following buttons to generate a drink and a recipe. Finally, have fun!');
+var appIntroText = $('<p class = "has-text-centered has-text-light  has-background-primary-dark pt-5 pb-5 appIntro" id = "appIntro">').text('First, enter a movie title input field below. Then click the following buttons to generate a drink and a recipe. Finally, have fun!');
 $('.container').append(appIntroText);
 
 //make 3 containers, one for each field
@@ -27,7 +27,7 @@ movieInput = $("<input>")
 movieInput.attr('id', 'movie-input');
 movieBtn = $("<button>")
 movieBtn.text('Enter');
-movieBtn.attr('class', 'button movie-button has-background-primary-dark', );
+movieBtn.attr('class', 'button movie-button has-background-primary-dark has-text-light has-text-weight-light', );
 $("#movie-container").append(movieInput)
 $("#movie-container").append(movieBtn)
 //container for results
@@ -42,7 +42,7 @@ $('body').append(drinkContainer);
 drinkBtn = $("<button id='drink-button'>")
 drinkBtn.text('Generate Drink');
 $("#drink-container").append(drinkBtn)
-drinkBtn.attr('class', 'button mb-4 has-background-primary-dark')
+drinkBtn.attr('class', 'button mb-4 has-background-primary-dark has-text-light has-text-weight-light')
 //container for results
 var drinkResultsContainer = $('<div class = "container" id = "drink-container-results">');
 $('body').append(drinkResultsContainer);
@@ -57,7 +57,7 @@ recipeBtn = $("<button>").attr('id', 'recipeSearch');
 recipeBtn.text('Enter');
 $("#recipe-container").append(recipeInput)
 $("#recipe-container").append(recipeBtn)
-recipeBtn.attr('class', 'button mb-4 has-background-primary-dark');
+recipeBtn.attr('class', 'button has-text-light has-text-weight-light mb-4 has-background-primary-dark');
 //container for results
 var recipeResultsContainer = $('<div class = "container" id = "recipe-container-results">');
 $('body').append(recipeResultsContainer);

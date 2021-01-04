@@ -41,7 +41,7 @@ if (previousIngredients != null) {
 }
 
 function previouslySearchedIngredients() {
-    var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients box pt-4 pb-4').text(('You\'ve already searched for these ingredients: ' + previousIngredients + ' '));
+    var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients has-text-weight-light has-text-light has-background-primary-dark box pt-4 pb-4').text(('You\'ve already searched for these ingredients: ' + previousIngredients + ' '));
     console.log(previousIngredients);
     $(recipeResultsContainer).append(previousIngredientsDiv);
 }
