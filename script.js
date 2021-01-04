@@ -33,7 +33,7 @@ $("#movie-container").append(movieBtn)
 //container for results
 var movieResultsContainer = $('<div class = "container" id = "movie-container-results">');
 $('body').append(movieResultsContainer);
-movieResultsContainer.attr('class', 'has-text-centered has-background-warning-light is-block has-text-weight-semibold pt-4 pb-4')
+movieResultsContainer.attr('class', 'movie-results has-text-centered has-background-warning-light is-block has-text-weight-semibold')
 
 //drinks
 var drinkContainer = $('<div class = "container column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd" id = "drink-container">');
@@ -61,6 +61,7 @@ recipeBtn.attr('class', 'button has-background-primary-dark');
 //container for results
 var recipeResultsContainer = $('<div class = "container" id = "recipe-container-results">');
 $('body').append(recipeResultsContainer);
-recipeResultsContainer.attr('class', 'has-text-centered has-background-warning-light is-block has-text-weight-semibold')
+recipeResultsContainer.attr('class', 'recipe-results has-text-centered has-background-warning-light is-block has-text-weight-semibold');
+
 
 

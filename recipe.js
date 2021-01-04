@@ -16,7 +16,7 @@ function generateRecipe(event) {
         var responseParse = JSON.parse(response)
         responseParse.results.forEach(function(result){
             var recipeLink = $('<a>').attr('class', 'recipe').attr('href', result.href).attr('target', '_blank').html(result.title + "<br>");
-            $('body').append(recipeLink);
+            $(recipeResultsContainer).append(recipeLink);
             // var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients').text(('You\'ve already searched for these ingredients: ' + previousIngredients));
         });      
     });
@@ -36,14 +36,14 @@ function generateRecipe(event) {
 
 if (previousIngredients != null) {
     var previousIngredientsButton = $('<button>').attr('id', 'previousIngredientsBtn').text('Click here to see previously searched ingredients');
-    previousIngredientsButton.attr('class', 'button');
+    previousIngredientsButton.attr('class', 'button is-small is-fullwidth');
     $('body').append(previousIngredientsButton);
 }
 
 function previouslySearchedIngredients() {
-    var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients').text(('You\'ve already searched for these ingredients: ' + previousIngredients + ' '));
+    var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients pt-4 pb-4').text(('You\'ve already searched for these ingredients: ' + previousIngredients + ' '));
     console.log(previousIngredients);
-    $('body').append(previousIngredientsDiv);
+    $(recipeResultsContainer).append(previousIngredientsDiv);
 }
 
 $('#previousIngredientsBtn').on('click', previouslySearchedIngredients);
