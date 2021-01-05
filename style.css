@@ -2,10 +2,11 @@ html {
     background-color: bisque;
     font-family: helvetica;
     margin: 25px;
+    border: solid 15px whitesmoke;
 }
 
 img {
-    border: 14px solid whitesmoke;
+    border: 14px solid teal;
     border-radius: 300%;
     display: block;
     margin-left: auto;
@@ -27,9 +28,14 @@ img {
     margin-bottom: 10px;
 }
 
+#appH2 {
+    border: solid 6px teal;
+}
+
 
 #appIntro {
     text-align: center;
+    border: solid 6px black;
 }
 
 
@@ -98,4 +104,5 @@ img {
     margin-right:30%;
     margin-top: 10px;
     font-size:1vw;
+    padding-bottom: 10px;
 }
