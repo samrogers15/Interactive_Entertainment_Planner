@@ -30,7 +30,7 @@ Our team was motivated by the monotony of quarantine life to create something th
 
 
 ## Screenshots
-![Screenshot](./Interactive-Entertainment-Planner.png)
+![Interactive Entertainment Planner](./Interactive-Entertainment-Planner.png)
 
 ## Technologies
 * HTML
