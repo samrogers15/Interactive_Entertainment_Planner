@@ -3,7 +3,7 @@ var generalContainer = $('<div class = "container">');
 $('body').append(generalContainer);
 
 //headers
-var titleSubDiv = $('<h2 class= "has-background-warning-light has-text-weight-semibold has-text-centered is-size-6 pt-4 pb-4 appH2" id = "appH2">').text('Interactive Entertainment Planner');
+var titleSubDiv = $('<h2 class= "has-background-warning-light has-text-weight-light has-text-centered is-size-3 pt-4 pb-4 appH2" id = "appH2">').text('Interactive Entertainment Planner');
 $('.container').append(titleSubDiv);
 
 
@@ -14,7 +14,7 @@ var headerSubDiv = $('<h2 class= "has-background-warning-light  has-text-centere
 $('.container').append(headerSubDiv);
 
 
-var appIntroText = $('<p class = "has-text-centered has-text-light has-background-primary-dark pt-5 pb-5 appIntro" id = "appIntro">').text('First, enter a movie title input field below. Then click the following buttons to generate a drink and a recipe. Finally, have fun!');
+var appIntroText = $('<p class = "has-text-centered has-text-light has-background-primary-dark pl-5 pr-5 pt-5 pb-5 mt-4 appIntro" id = "appIntro">').text('First, enter a movie title in the input field below. Then click the following buttons to generate a drink and a recipe. You can view your previously searched ingredients by clicking the previously searched ingredients button at the bottom of the page.  Finally, have fun!');
 $('.container').append(appIntroText);
 
 //make 3 containers, one for each field
@@ -23,8 +23,7 @@ $('.container').append(appIntroText);
 var movieContainer = $('<div class = "container column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd" id = "movie-container">');
 $('body').append(movieContainer);
 //create btn
-movieInput = $("<input>")
-movieInput.attr('id', 'movie-input');
+movieInput = $("<input>").attr('id', 'movie-input').attr('placeholder', 'Enter Movie Title Here');
 movieBtn = $("<button>")
 movieBtn.text('Enter');
 movieBtn.attr('class', 'button movie-button has-background-primary-dark has-text-light has-text-weight-light', );
@@ -52,7 +51,7 @@ $('body').append(drinkResultsContainer);
 var recipeContainer = $('<div class = "container column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd" id = "recipe-container">');
 $('body').append(recipeContainer);
 //create btn
-recipeInput = $("<input>").attr('id', 'recipeInput').attr('placeholder', 'Enter ingredients separated by a comma!');
+recipeInput = $("<input>").attr('id', 'recipeInput').attr('placeholder', 'Enter Ingredients Here');
 recipeBtn = $("<button>").attr('id', 'recipeSearch');
 recipeBtn.text('Enter');
 $("#recipe-container").append(recipeInput)
