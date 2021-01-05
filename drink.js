@@ -1,7 +1,7 @@
 var drinkQueryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
 
 
-//create an onclicik event 
+//create an onclick event 
 $( "#drink-button" ).click(function() {
 
     //add the ajax
