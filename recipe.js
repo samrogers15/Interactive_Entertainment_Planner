@@ -17,7 +17,6 @@ function generateRecipe(event) {
         responseParse.results.forEach(function(result){
             var recipeLink = $('<a>').attr('class', 'recipe').attr('href', result.href).attr('target', '_blank').html(result.title + "<br>");
             $(recipeResultsContainer).append(recipeLink);
-            // var previousIngredientsDiv = $('<div>').attr('class', 'previousIngredients').text(('You\'ve already searched for these ingredients: ' + previousIngredients));
         });      
     });
  
@@ -28,7 +27,7 @@ function generateRecipe(event) {
         } else {
             old = JSON.parse(old);
         }
-        localStorage.setItem(name, JSON.stringify(old.concat(data)));
+        localStorage.setItem(name, JSON.stringify(old.concat(' ' + data)));
     }
     
     appendToStorage('previousSearches', ingredients);
