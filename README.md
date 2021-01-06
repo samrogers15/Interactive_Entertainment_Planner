@@ -36,7 +36,7 @@ Our team was motivated by the monotony of quarantine life to create something th
 * HTML
 * CSS
 * JQuery
-* TBD
+* Bulma
 
 ## Live link
 https://samrogers15.github.io/Interactive_Entertainment_Planner/
